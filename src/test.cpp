@@ -33,7 +33,7 @@
 int function_loop_num[f_num]={2};
 int Loops_counter_input[l_num] = {32,32};
 int function_array_num[f_num]={5};
-int array_size[a_num]={32,32,32,32,32,32};   //q,s,r,A,p (!check before DSE)
+int array_size[a_num]={32,32,32,32,32,32};   //q,r,s,A,p (!check before DSE)
 int array_dimension[d_num]={1,1,1,2,1};
 int Loops_unroll_input[l_num] = {1,1};   //some small loops are unrolled completely in CFG
 int Loops_pipeline_input[l_num]={0,0};
