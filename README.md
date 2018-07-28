@@ -2,7 +2,7 @@ Target of COMBA (for accademic use):
 ======================================
 COMBA is used to estimate the performance of applications when applied with different pragma configurations in HLS tools, such as Vivado HLS. Another function of COMBA is that it can explore the design space quickly and find a high-performance configuration within minutes under given resource constraints.
 
-Please cite our paper if you want to use COMBA for academic use:
+Please cite our paper if you use COMBA for your academic research:
 ```
 @inproceedings{zhao2017comba,
   title={COMBA: A comprehensive model-based analysis framework for high level synthesis of real applications},
@@ -13,6 +13,13 @@ Please cite our paper if you want to use COMBA for academic use:
   organization={IEEE}
 }
 ```
+
+License:
+======================================
+The source code is released under [GPLv3](https://www.gnu.org/licenses/licenses.en.html) license.
+If you have any questions about how to use our tool, please contact Jieru ZHAO (jzhaoao@connect.ust.hk).
+
+For commercial inqueries, please contact Prof. Wei ZHANG (wei.zhang@ust.hk).
 
 
 Building COMBA:
