@@ -1,5 +1,7 @@
-Target of COMBA (for accademic use):
-======================================
+COMBA
+=====================================
+Target of COMBA:
+-------------------------------------
 COMBA is used to estimate the performance of applications when applied with different pragma configurations in HLS tools, such as Vivado HLS. Another function of COMBA is that it can explore the design space quickly and find a high-performance configuration within minutes under given resource constraints.
 
 Please cite our paper if you use COMBA for your academic research:
