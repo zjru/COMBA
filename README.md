@@ -24,32 +24,37 @@ If you have any questions about how to use our tool, please contact Jieru ZHAO (
 For commercial inqueries, please contact Prof. Wei ZHANG (wei.zhang@ust.hk).
 
 
+
 Building COMBA:
 --------------------------------------
- * The platform we use is the LLVM compiler (Version 3.4) with the clang front-end. Please install it at first. The tool can be used directly on LLVM 3.4. 
- * Put the whole folder of "COMBA" under "/llvm-3.4/lib/Transforms".
- * Add "add_subdirectory(COMBA)" in the "/llvm-3.4/lib/Transforms/CMakeLists.txt".
+1. The platform we use is the LLVM compiler (Version 3.4) with the clang front-end. Please install it at first. The tool can be used directly on LLVM 3.4. 
+2. Put the whole folder of "COMBA" under "/llvm-3.4/lib/Transforms".
+3. Add "add_subdirectory(COMBA)" in the "/llvm-3.4/lib/Transforms/CMakeLists.txt".
 
 
 
 
 Using COMBA:
 --------------------------------------
- For testing given applications in the "test" folder (two steps):
+For testing given applications in the "test" folder (two steps):
 
- 1. To compile the source codes, run the bash file "runMyPro.sh".
- 2. To invoke the tool to analyze one application, run the command:   
-	`opt -load /llvm-3.4/Release+Asserts/lib/LLVMTest.so -test < ./test/$name.ll >/dev/null`.   
-     $name.ll is the .ll file of the corresponding application, which is bicg.ll by default.
+1. To compile the source codes, run the bash file "runMyPro.sh".
+2. To invoke the tool to analyze one application, run the command:   
+```
+opt -load /llvm-3.4/Release+Asserts/lib/LLVMTest.so -test < ./test/$name.ll >/dev/null 
+```
+   $name.ll is the .ll file of the corresponding application, which is bicg.ll by default.
 
 
- For testing users' own applications (five steps):
+For testing users' own applications (five steps):
 
-  1. To obtain the .ll file, run the command:  
-	`clang -O1 -emit-llvm -S $name.c -o $name.ll`.   	   
-     $name.c is the application that you want to test and $name.ll is the corresponding .ll file.
-  2. Put the generated .ll file in the folder "test".
-  3. Modify the input of the tool as following:
+1. To obtain the .ll file, run the command:
+```
+clang -O1 -emit-llvm -S $name.c -o $name.ll
+```
+   $name.c is the application that you want to test and $name.ll is the corresponding .ll file.
+2. Put the generated .ll file in the folder "test".
+3. Modify the input of the tool as following:
 	* In "/src/test.h", the values of four varibles (d_num, a_num, l_num and f_num) need to be modified. 
 		* d_num is the number of arrays in the top-function;   
 		* a_num is the sum of the number of dimension of each array; 
@@ -71,7 +76,9 @@ Using COMBA:
       
  4. To compile the source codes, run the bash file "runMyPro.sh".
  5. To invoke the tool to analyze the application, run the command:  
-	`opt -load /llvm-3.4/Release+Asserts/lib/LLVMTest.so -test < ./test/$name.ll >/dev/null`.
+ ```
+ opt -load /llvm-3.4/Release+Asserts/lib/LLVMTest.so -test < ./test/$name.ll >/dev/null
+ ```
 
 Notes:
 --------------------------------------
