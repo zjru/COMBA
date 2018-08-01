@@ -1,6 +1,6 @@
 COMBA
 =====================================
-A Comprehensive Model-Based Analysis Framework for High Level Synthesis on FPGAs
+Model-Based Analysis Framework for High Level Synthesis on FPGAs
 -------------------------------------
 COMBA is used to estimate the performance of applications when applied with different pragma configurations in HLS tools, such as Vivado HLS. Another function of COMBA is that it can explore the design space quickly and find a high-performance configuration within minutes under given resource constraints.
 
