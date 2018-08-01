@@ -40,6 +40,7 @@ Using COMBA:
 --------------------------------------
 For testing given applications in the "test" folder (two steps):
 1. To compile the source codes, run the bash file "runMyPro.sh".
+
 2. To invoke the tool to analyze one application, run the command:   
 	```
 	$ opt -load /llvm-3.4/Release+Asserts/lib/LLVMTest.so -test < ./test/$name.ll >/dev/null 
