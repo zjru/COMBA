@@ -38,17 +38,17 @@ Building COMBA:
 
 Using COMBA:
 --------------------------------------
-1. For testing given applications in the "test" folder (two steps):
-	* To compile the source codes, run the bash file "runMyPro.sh".
-	* To invoke the tool to analyze one application, run the command:   
+For testing given applications in the "test" folder (two steps):
+1. To compile the source codes, run the bash file "runMyPro.sh".
+2. To invoke the tool to analyze one application, run the command:   
 	```
 	$ opt -load /llvm-3.4/Release+Asserts/lib/LLVMTest.so -test < ./test/$name.ll >/dev/null 
 	```
-		$name.ll is the .ll file of the corresponding application, which is bicg.ll by default.
+    $name.ll is the .ll file of the corresponding application, which is bicg.ll by default.
 
-2. For testing users' own applications (five steps):
+For testing users' own applications (five steps):
 
-1) To obtain the .ll file, run the command:
+1. To obtain the .ll file, run the command:
 ```
 $ clang -O1 -emit-llvm -S $name.c -o $name.ll
 ```
