@@ -53,7 +53,9 @@ For testing users' own applications (five steps):
 clang -O1 -emit-llvm -S $name.c -o $name.ll
 ```
    $name.c is the application that you want to test and $name.ll is the corresponding .ll file.
+
 2. Put the generated .ll file in the folder "test".
+
 3. Modify the input of the tool as following:
 	* In "/src/test.h", the values of four varibles (d_num, a_num, l_num and f_num) need to be modified. 
 		* d_num is the number of arrays in the top-function;   
