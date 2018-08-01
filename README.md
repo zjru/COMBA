@@ -79,7 +79,7 @@ For testing users' own applications (five steps):
  4. To compile the source codes, run the bash file "runMyPro.sh".
  5. To invoke the tool to analyze the application, run the command:  
 	 ```
-	 opt -load /llvm-3.4/Release+Asserts/lib/LLVMTest.so -test < ./test/$name.ll >/dev/null
+	 $ opt -load /llvm-3.4/Release+Asserts/lib/LLVMTest.so -test < ./test/$name.ll >/dev/null
 	 ```
 
 Notes:
