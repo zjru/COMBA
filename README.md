@@ -29,7 +29,7 @@ For commercial inqueries, please contact Prof. Wei ZHANG (wei.zhang@ust.hk).
 --------------------------------------
 1.1  The platform we use is the LLVM compiler (Version 3.4) with the clang front-end. Please install it at first. The tool can be used directly on LLVM 3.4. 
 
-2. Put the whole folder of "COMBA" under "/llvm-3.4/lib/Transforms".
+2.   Put the whole folder of "COMBA" under "/llvm-3.4/lib/Transforms".
 
 3. Add "add_subdirectory(COMBA)" in the "/llvm-3.4/lib/Transforms/CMakeLists.txt".
 
