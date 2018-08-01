@@ -25,28 +25,25 @@ For commercial inqueries, please contact Prof. Wei ZHANG (wei.zhang@ust.hk).
 
 
 
-## Building COMBA:
+## 1. Building COMBA:
 --------------------------------------
 1.1  The platform we use is the LLVM compiler (Version 3.4) with the clang front-end. Please install it at first. The tool can be used directly on LLVM 3.4. 
-
-2.   Put the whole folder of "COMBA" under "/llvm-3.4/lib/Transforms".
-
-3. Add "add_subdirectory(COMBA)" in the "/llvm-3.4/lib/Transforms/CMakeLists.txt".
+1.2  Put the whole folder of "COMBA" under "/llvm-3.4/lib/Transforms".
+1.3  Add "add_subdirectory(COMBA)" in the "/llvm-3.4/lib/Transforms/CMakeLists.txt".
 
 
 
 
-Using COMBA:
+## 2. Using COMBA:
 --------------------------------------
+2.1  For testing given applications in the "test" folder (two steps):
 
-For testing given applications in the "test" folder (two steps):
-
-1. To compile the source codes, run the bash file "runMyPro.sh".
-2. To invoke the tool to analyze one application, run the command:   
-```
-$ opt -load /llvm-3.4/Release+Asserts/lib/LLVMTest.so -test < ./test/$name.ll >/dev/null 
-```
-   $name.ll is the .ll file of the corresponding application, which is bicg.ll by default.
+    * To compile the source codes, run the bash file "runMyPro.sh".
+    * To invoke the tool to analyze one application, run the command:   
+	```
+	$ opt -load /llvm-3.4/Release+Asserts/lib/LLVMTest.so -test < ./test/$name.ll >/dev/null 
+	```
+      $name.ll is the .ll file of the corresponding application, which is bicg.ll by default.
 
 
 For testing users' own applications (five steps):
