@@ -27,12 +27,12 @@ For commercial inqueries, please contact Prof. Wei ZHANG (wei.zhang@ust.hk).
 
 Building COMBA:
 --------------------------------------
-1. The platform we use is the LLVM compiler (Version 3.4) with the clang front-end. Please install it at first. The tool can be used directly on LLVM 3.4. 
+1. The platform we use is the LLVM compiler (Version 3.4) with the clang front-end. Please install it at first. 
+    The tool can be used directly on LLVM 3.4. 
 
 2. Put the whole folder of "COMBA" under "/llvm-3.4/lib/Transforms".
 
 3. Add "add_subdirectory(COMBA)" in the "/llvm-3.4/lib/Transforms/CMakeLists.txt".
-
 
 
 
@@ -47,14 +47,12 @@ For testing given applications in the "test" folder (two steps):
     $name.ll is the .ll file of the corresponding application, which is bicg.ll by default.
 
 For testing users' own applications (five steps):
-
 1. To obtain the .ll file, run the command:
-```
-$ clang -O1 -emit-llvm -S $name.c -o $name.ll
-```
-   
-   $name.c is the application that you want to test and $name.ll is the corresponding .ll file.
-
+	```
+	$ clang -O1 -emit-llvm -S $name.c -o $name.ll
+	```
+    $name.c is the application that you want to test and $name.ll is the corresponding .ll file.
+    
 2. Put the generated .ll file in the folder "test".
 
 3. Modify the input of the tool as following:
@@ -79,9 +77,9 @@ $ clang -O1 -emit-llvm -S $name.c -o $name.ll
       
  4. To compile the source codes, run the bash file "runMyPro.sh".
  5. To invoke the tool to analyze the application, run the command:  
- ```
- opt -load /llvm-3.4/Release+Asserts/lib/LLVMTest.so -test < ./test/$name.ll >/dev/null
- ```
+	 ```
+	 opt -load /llvm-3.4/Release+Asserts/lib/LLVMTest.so -test < ./test/$name.ll >/dev/null
+	 ```
 
 Notes:
 --------------------------------------
