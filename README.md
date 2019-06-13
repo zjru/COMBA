@@ -15,6 +15,15 @@ Please cite our paper if you use COMBA for your academic research:
   organization={IEEE}
 }
 ```
+```
+@article{zhao2019performance,
+  title={Performance Modeling and Directives Optimization for High Level Synthesis on FPGA},
+  author={Zhao, Jieru and Feng, Liang and Sinha, Sharad and Zhang, Wei and Liang, Yun and He, Bingsheng},
+  journal={IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems},
+  year={2019},
+  publisher={IEEE}
+}
+```
 
 License:
 --------------------------------------
